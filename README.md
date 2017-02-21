@@ -1,8 +1,20 @@
 # MigrationRollinout
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/migration_rollinout`. To experiment with that code, run `bin/console` for an interactive prompt.
+This gem adds rake task: 
 
-TODO: Delete this and the text above, and describe your gem
+```ruby
+rake db:rollinout
+```
+
+It is a simple wrapper task for:
+```ruby
+rake db:migrate db:rollback db:migrate
+```
+
+Assures that your migration is reversable.
+
+Makes life easier ;)
+
 
 ## Installation
 
