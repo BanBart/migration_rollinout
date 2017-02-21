@@ -6,6 +6,7 @@ module MigrationRollinout
         task :rollinout => :environment do
           Rake::Task['db:migrate'].invoke
           Rake::Task['db:rollback'].invoke
+          Rake::Task["db:migrate"].reenable
           Rake::Task['db:migrate'].invoke
         end
       end
